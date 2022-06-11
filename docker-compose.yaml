@@ -1,0 +1,10 @@
+version: '3'
+ 
+services:
+  nginx:
+    build: ./test-app/
+    image: dockerdemo
+    ports:
+      - 80:80
+    volumes:
+      - ./test-app/build:/usr/share/nginx/html
